@@ -8,7 +8,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: galaxy
-        uses: buluma/galaxy-action@v1.0.3
+        uses: robertdebock/galaxy-action@1.2.0
         with:
           galaxy_api_key: ${{ secrets.galaxy_api_key }}
           git_branch: main
