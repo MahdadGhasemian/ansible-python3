@@ -5,6 +5,10 @@
   apt:
     update_cache: yes
 
+- name: Upgrade all packages
+  apt:
+    upgrade: yes
+
 - name: Install Python 3
   apt:
     name:
