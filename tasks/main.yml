@@ -1,0 +1,41 @@
+---
+# tasks file for ansible-python3
+
+- name: Update apt package cache
+  apt:
+    update_cache: yes
+
+- name: Install Python 3
+  apt:
+    name:
+      - python3
+      - python3-pip
+    state: present
+
+- name: Download get-pip.py
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: /tmp/get-pip.py
+
+- name: Run get-pip.py
+  command: python3 /tmp/get-pip.py
+
+- name: Install pyOpenSSL using pip
+  pip:
+    name: pyOpenSSL
+    state: latest
+
+- name: Install Docker Python module
+  pip:
+    name: docker
+    state: present
+
+- name: Install docker-compose Python package
+  pip:
+    name: docker-compose
+    state: present
+
+- name: Install pymongo Python package
+  pip:
+    name: pymongo
+    state: present
