@@ -26,20 +26,20 @@
 
 - name: Install pyOpenSSL using pip
   pip:
-    name: pyOpenSSL
+    name: "pyOpenSSL=={{ pyOpenSSL_python_module_version }}"
     state: latest
 
 - name: Install Docker Python module
   pip:
-    name: docker
+    name: "docker=={{ docker_python_module_version }}"
     state: present
 
 - name: Install docker-compose Python package
   pip:
-    name: docker-compose
+    name: "docker-compose=={{ docker_compose_python_module_version }}"
     state: present
 
 - name: Install pymongo Python package
   pip:
-    name: pymongo
+    name: "pymongo=={{ pymongo_python_module_version }}"
     state: present

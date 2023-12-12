@@ -8,7 +8,12 @@ None.
 
 ## Role Variables
 
-None.
+```yaml
+pyOpenSSL_python_module_version: "23.3.0"
+docker_python_module_version: "6.1.3"
+docker_compose_python_module_version: "1.29.2"
+pymongo_python_module_version: "4.6.1"
+```
 
 ## Dependencies
 
